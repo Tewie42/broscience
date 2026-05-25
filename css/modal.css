@@ -138,6 +138,12 @@
     background: #00b33c;
     color: #fff;
 }
+.keycap.selected {
+    background: #bfbfb6;
+    box-shadow: 0 2px #000;
+    transform: translateY(2px);
+}
+
 
 /* ================================
    DESKTOP RESPONSIVE LAYOUT
