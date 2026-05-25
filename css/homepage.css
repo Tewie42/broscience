@@ -1,11 +1,11 @@
-/* ================================
+* ================================
    GLOBAL PAGE STYLING
    ================================ */
 
 body {
     margin: 0;
     background: #0d0d0d;
-    font-family: 'Bangers', sans-serif;
+    font-family: 'digital-7', courier new;
     color: #f2f2f2;
     display: flex;
     overflow-x: hidden;
@@ -16,7 +16,7 @@ body {
    ================================ */
 
 .sidebar {
-    width: 150px;
+    width: 160px;
     background: #111;
     border-right: 4px solid #000;
     padding: 10px 0;
@@ -53,7 +53,7 @@ body {
     border-radius: 4px;
     font-size: 12px;
     cursor: pointer;
-    box-shadow: 0 4px #525195;
+    box-shadow: 0 4px #4b76ff;
     transition: 0.1s;
     text-align: center;
 }
@@ -97,14 +97,15 @@ body {
 
 .welcome-box h1 {
     margin: 0;
-    margin-left: 40px;
+    margin-left: 65px;
     font-size: 32px;
     color: #f2f2f2;
     text-shadow: 0 0 6px #4b76ff;
 }
 
 .welcome-box p {
-    margin-top: 10px;
+    margin-top: 30px;
+    margin-left: 30px;
     font-size: 16px;
     color: #ccc;
 }
@@ -134,3 +135,4 @@ body {
         max-width: 80%;
     }
 }
+
