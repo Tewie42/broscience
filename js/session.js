@@ -1,71 +1,53 @@
-// ===============================
-// SESSION STORAGE HANDLING
-// ===============================
+// js/session.js
 
-// Buttons
+// Elements
+const modal = document.getElementById("entryModal");
+
 const broBtn = document.getElementById("broBtn");
 const brodetteBtn = document.getElementById("brodetteBtn");
 const metricBtn = document.getElementById("metricBtn");
 const imperialBtn = document.getElementById("imperialBtn");
 
-// Modal
-const modal = document.getElementById("entryModal");
-
-// Bottom buttons
 const anonBtn = document.querySelector(".link-btn");
 const loginBtn = document.querySelector(".link-btn.red");
 const signupBtn = document.querySelector(".link-btn.green");
 
-// Track selections
 let selectedGender = null;
 let selectedUnits = null;
 
-
-// ===============================
-// SAVE SELECTIONS TO SESSION
-// ===============================
-
-function saveGender(gender) {
-    selectedGender = gender;
-    sessionStorage.setItem("gender", gender);
+// Highlight helper
+function selectKey(button, group) {
+    group.forEach(btn => btn.classList.remove("selected"));
+    button.classList.add("selected");
 }
 
-function saveUnits(units) {
-    selectedUnits = units;
-    sessionStorage.setItem("units", units);
-}
-
-
-// ===============================
-// GENDER BUTTONS
-// ===============================
-
+// Save + highlight gender
 broBtn.addEventListener("click", () => {
-    saveGender("bro");
+    selectKey(broBtn, [broBtn, brodetteBtn]);
+    selectedGender = "bro";
+    sessionStorage.setItem("gender", "bro");
 });
 
 brodetteBtn.addEventListener("click", () => {
-    saveGender("brodette");
+    selectKey(brodetteBtn, [broBtn, brodetteBtn]);
+    selectedGender = "brodette";
+    sessionStorage.setItem("gender", "brodette");
 });
 
-
-// ===============================
-// UNIT BUTTONS
-// ===============================
-
+// Save + highlight units
 metricBtn.addEventListener("click", () => {
-    saveUnits("metric");
+    selectKey(metricBtn, [metricBtn, imperialBtn]);
+    selectedUnits = "metric";
+    sessionStorage.setItem("units", "metric");
 });
 
 imperialBtn.addEventListener("click", () => {
-    saveUnits("imperial");
+    selectKey(imperialBtn, [metricBtn, imperialBtn]);
+    selectedUnits = "imperial";
+    sessionStorage.setItem("units", "imperial");
 });
 
-
-// ===============================
-// VALIDATION BEFORE CLOSING MODAL
-// ===============================
-
+// Check before closing
 function canCloseModal() {
     return selectedGender !== null && selectedUnits !== null;
 }
@@ -75,29 +57,11 @@ function tryCloseModal() {
         alert("Choose Identity + Units first");
         return;
     }
-
     modal.style.display = "none";
 }
 
-
-// ===============================
-// BOTTOM BUTTONS CLOSE MODAL
-// ===============================
-
+// Bottom buttons
 anonBtn.addEventListener("click", tryCloseModal);
 loginBtn.addEventListener("click", tryCloseModal);
 signupBtn.addEventListener("click", tryCloseModal);
 
-
-// ===============================
-// OPTIONAL: AUTO‑LOAD PREVIOUS SESSION
-// ===============================
-//
-// If you want the modal to auto‑close when the user returns
-// and already has gender + units saved, uncomment below:
-//
-// window.addEventListener("load", () => {
-//     const g = sessionStorage.getItem("gender");
-//     const u = sessionStorage.getItem("units");
-//     if (g && u) modal.style.display = "none";
-// });
