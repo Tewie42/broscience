@@ -24,7 +24,7 @@
     width: 90%;
     max-width: 480px;
     border-radius: 8px;
-    box-shadow: 0 0 25px #8a2be2;
+    box-shadow: 0 0 25px #4b76ff;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -40,7 +40,7 @@
     text-align: center;
     color: #f2f2f2;
     font-size: 26px;
-    text-shadow: 0 0 8px #9d4bff;
+    text-shadow: 0 0 8px #4b76ff;
     margin: 0;
 }
 
@@ -58,7 +58,7 @@
     color: #9d4bff;
     font-size: 14px;
     margin-top: 5px;
-    text-shadow: 0 0 6px #9d4bff;
+    text-shadow: 0 0 6px #4b76ff;
 }
 
 /* ================================
