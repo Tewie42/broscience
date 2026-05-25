@@ -55,7 +55,7 @@
 }
 
 .section-label {
-    color: #9d4bff;
+    color: #4b76ff;
     font-size: 14px;
     margin-top: 5px;
     text-shadow: 0 0 6px #4b76ff;
@@ -139,8 +139,8 @@
     color: #fff;
 }
 .keycap.selected {
-    background: #bfbfb6;
-    box-shadow: 0 2px #000;
+    background: #323236;
+    box-shadow: 0 2px #4b76ff;
     transform: translateY(2px);
 }
 
