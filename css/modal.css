@@ -139,8 +139,8 @@
     color: #fff;
 }
 .keycap.selected {
-    background: #323236;
-    box-shadow: 0 2px #4b76ff;
+    background: #3d3d40;
+    box-shadow: 0 2px #1911e1;
     transform: translateY(2px);
 }
 
