@@ -1,4 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Broscience</title>
+
+    <!-- HOMEPAGE + SIDEBAR STYLES -->
+    <link rel="stylesheet" href="css/homepage.css">
+
+    <!-- MODAL STYLES -->
+    <link rel="stylesheet" href="css/modal.css">
+
+</head>
 <body>
+
+    <!-- SIDEBAR -->
     <div class="sidebar">
         <div class="logo">BROSCIENCE</div>
 
@@ -15,10 +31,51 @@
         </div>
     </div>
 
+    <!-- MAIN CONTENT -->
     <div class="main-content">
         <div class="welcome-box">
             <h1>Welcome to Broscience</h1>
             <p>Your comic‑book fitness universe awaits.</p>
         </div>
     </div>
+
+
+    <!-- ENTRY MODAL -->
+    <div class="modal-overlay" id="entryModal">
+        <div class="modal-panel">
+
+            <h2 class="modal-title">Choose Your Path</h2>
+
+            <div class="modal-left">
+                <div class="section-label">Identity</div>
+
+                <button class="keycap" id="broBtn">BRO</button>
+                <button class="keycap" id="brodetteBtn">BRODETTE</button>
+
+                <div class="section-label">Units</div>
+
+                <button class="keycap" id="metricBtn">METRIC</button>
+                <button class="keycap" id="imperialBtn">IMPERIAL</button>
+            </div>
+
+            <div class="modal-right">
+                <input type="text" placeholder="Username" class="bubble-input">
+                <input type="password" placeholder="Password" class="bubble-input">
+                <input type="password" placeholder="Confirm Password" class="bubble-input">
+            </div>
+
+            <div class="modal-bottom">
+                <button class="link-btn">Anonymous Sesh</button>
+                <button class="link-btn red">Log In</button>
+                <button class="link-btn green">Sign Up</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- JS FILES (optional for later) -->
+    <!-- <script src="js/modal.js"></script> -->
+    <!-- <script src="js/session.js"></script> -->
+
 </body>
+</html>
