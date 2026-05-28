@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Broscience Program Builder</title>
+
+    <link rel="stylesheet" href="../css/program.css">
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <div class="logo">BROSCIENCE</div>
+
+        <button class="nav-btn" onclick="location.href='../index.html'">Home</button>
+        <button class="nav-btn">Calorie Calculator</button>
+        <button class="nav-btn">Macro Calculator</button>
+        <button class="nav-btn">Program Builder</button>
+        <button class="nav-btn">Profile</button>
+
+        <div class="auth-section">
+            <button class="nav-btn">Log In</button>
+            <button class="nav-btn">Sign Up</button>
+        </div>
+    </div>
+
+    <div class="program-content">
+
+        <h1 class="title">Program Builder</h1>
+
+        <div class="program-box">
+
+            <label class="label">Choose Split</label>
+            <select id="splitSelect" class="input">
+                <option value="">Select Split</option>
+                <option value="brosplit">Brosplit</option>
+                <option value="ppl">PPL (Push Pull Legs)</option>
+                <option value="frontback">Front / Back</option>
+                <option value="justlift">Just Lift Bro</option>
+            </select>
+
+            <div id="focusAreaBox" style="display:none;">
+                <label class="label">Pick Two Focus Areas</label>
+                <select id="focus1" class="input">
+                    <option value="">Select Area</option>
+                    <option value="chest">Chest</option>
+                    <option value="back">Back</option>
+                    <option value="shoulders">Shoulders</option>
+                    <option value="arms">Arms</option>
+                    <option value="legs">Legs</option>
+                    <option value="glutes">Glutes</option>
+                </select>
+
+                <select id="focus2" class="input">
+                    <option value="">Select Area</option>
+                    <option value="chest">Chest</option>
+                    <option value="back">Back</option>
+                    <option value="shoulders">Shoulders</option>
+                    <option value="arms">Arms</option>
+                    <option value="legs">Legs</option>
+                    <option value="glutes">Glutes</option>
+                </select>
+            </div>
+
+            <button id="generateBtn" class="generate-btn">Generate Program</button>
+
+        </div>
+
+        <div id="programOutput" class="output-box"></div>
+
+    </div>
+
+    <script src="../js/program.js"></script>
+
+</body>
+</html>
